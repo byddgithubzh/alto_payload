@@ -3,7 +3,7 @@
 
 
 ## 简介 ##
-这是一个利用github actions云端自动化提取刷机包payload.bin中的boot.img的脚本。
+这是一个利用github actions云端自动化提取刷机包payload.bin中的任意镜像的脚本。
 
 # 快速编辑
 
@@ -12,8 +12,8 @@
 
 # 打开GitHub Action
 
-快捷打开[Github Action](https://github.com/byddgithubzh/actions_android_bootimg_payload_dumper/actions)
-一些留存代码段放在了，[build.txt](https://github.com/byddgithubzh/actions_android_bootimg_payload_dumper/blob/main/%E8%BD%AF%E4%BB%B6/build.txt)
+快捷打开[Github Action](https://github.com/byddgithubzh/alto_payload/actions)
+一些留存代码段放在了，[build.txt](https://github.com/byddgithubzh/alto_payload/blob/main/%E8%BD%AF%E4%BB%B6/build.txt)
 
 
 # 使用
@@ -24,11 +24,11 @@
  
 接着，编辑.github/workflows文件夹下的.yml文件，将ROM_URL改成你要提取的刷机包直链地址（最好是官方直链，如miui的官方下载地址），支持zip刷机包（zip里面是payload.bin）。
 
-最后，仅仅需要按下Star小星星按钮，就可以提取刷机包payload.bin中的boot.img
+最后，仅仅需要按下Star小星星按钮，就可以提取刷机包payload.bin中的任意镜像文件
 
 查看进度，在Actions菜单，get_bootimg_from_payload→make→Upload the bootimg to WeTransfer中找到Download link:xxx就是下载地址。
 
-本项目依赖来自：https://github.com/vm03/payload_dumper 感谢。
+本项目依赖来自：https://github.com/ssut/payload-dumper-go 感谢。
 
 
 # 一些可用快捷方便程序
