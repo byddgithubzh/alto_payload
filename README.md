@@ -7,7 +7,7 @@
 
 # 快速编辑
 
-一步打开[getbootimg.yml](https://github.com/byddgithubzh/actions_android_bootimg_payload_dumper/edit/main/.github/workflows/getbootimg.yml)
+一步打开[get_images.yml](https://github.com/byddgithubzh/alto_payload/edit/main/.github/workflows/get_images.yml)
 
 
 # 打开GitHub Action
