@@ -42,7 +42,7 @@ jobs:
        
   
     - name: Download the ROM
-      run: |
+      run: |https://bigota.d.miui.com/V14.0.11.0.TMNCNXM/miui_MONDRIAN_V14.0.11.0.TMNCNXM_b9305eb2b8_13.0.zip
        cd ~
        wget -O rom.zip $ROM_URL
    
