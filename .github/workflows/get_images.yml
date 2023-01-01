@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win10_22H2_Chinese_Simplified_x64.iso?t=12beab16-6d12-4f8a-bfaa-532a039adced&e=1672681838&h=fc42af9b71172a63b55a5116f01796c747ef5791e80360606a2f62503ee46879
+  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win11_22H2_Chinese_Simplified_x64v1.iso?t=e38c728c-0dda-405f-b750-7e937ae49e9d&e=1672682332&h=d87669f0583f9510bdd0e5824cccbc8732b9c2a07452cb2f483a42345f6ce4d2
   ROM_NAME: alioth_images_V12.5.3.0.RKHCNXM_20210517.0000.00_11.0_cn
 
   TZ: Asia/Shanghai
