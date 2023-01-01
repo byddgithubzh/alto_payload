@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://bigota.d.miui.com/V14.0.11.0.TMNCNXM/mondrian_images_V14.0.11.0.TMNCNXM_20221221.0000.00_13.0_cn_196d1a3032.tgz
+  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win10_22H2_China_GGK_Chinese_Simplified_x64.iso?t=9cbce982-d46e-4d95-863c-77474ea59bef&e=1672681157&h=f6903343f3dc8dcbe8b18df201f0b4629f4b2075791d4d0a9b2bad029233be23
   ROM_NAME: alioth_images_V12.5.3.0.RKHCNXM_20210517.0000.00_11.0_cn
 
   TZ: Asia/Shanghai
@@ -16,37 +16,17 @@ jobs:
 
     steps:
 
-    - name: install Python 3.8
-      uses: actions/setup-python@v1
-      with:
-          python-version: 3.8
-          
-    - name: Initialization environment 
-      run: |
-        cd ~
-        python -m pip install bsdiff4==1.1.5
-        python -m pip install six==1.16.0
-        python -m pip install protobuf==3.19.3
-        
-    - name: Clean Up Disk Space
-      run: |
-        docker rmi `docker images -q`
-        sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
-        sudo -E apt-get -y purge azure-cli ghc* zulu* llvm* firefox google* dotnet* powershell openjdk* mysql* php*
-        sudo -E apt-get -y autoremove --purge
-        sudo -E apt-get clean 
-          
   
     - name: Download the ROM
       run: |
        cd ~
-       wget -O rom.tgz $ROM_URL
+       wget -O rom.iso $ROM_URL
    
     - name: unzip the ROM
       run: |
        cd ~
-       tar -zxvf rom.tgz 
-       dir
+       sha256sum rom.iso
+       sha256sum rom.iso >sha.txt
        ls -l
        tree
    
@@ -64,4 +44,4 @@ jobs:
       if: always()
       with:
         name: 12S_PRO_splash_Payload-images
-        path: ~/mondrian_images_V14.0.11.0.TMNCNXM_20221221.0000.00_13.0_cn/images/logo.*
+        path: ~/sha.txt
