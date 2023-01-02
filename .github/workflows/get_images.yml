@@ -21,11 +21,12 @@ jobs:
       run: |
        cd ~
        wget -O rom.iso $ROM_URL
-       stat rom.iso
+
    
     - name: unzip the ROM
       run: |
        cd ~
+       stat rom.iso
        sha256sum rom.iso
        sha256sum rom.iso >sha.txt
        ls -l
