@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win8.1_SingleLang_Chinese(Simplified)_x64.iso?t=03e87806-61ee-4a10-b179-7a22eac0ebdd&e=1672759490&h=88fe1007260893bd97ba5d9b55de7cd1fc3781b39c1b8d9e541fdce94a74310d
+  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win10_22H2_China_GGK_Chinese_Simplified_x64.iso?t=9cbce982-d46e-4d95-863c-77474ea59bef&e=1672681157&h=f6903343f3dc8dcbe8b18df201f0b4629f4b2075791d4d0a9b2bad029233be23
   ROM_NAME: alioth_images_V12.5.3.0.RKHCNXM_20210517.0000.00_11.0_cn
 
   TZ: Asia/Shanghai
@@ -20,16 +20,14 @@ jobs:
     - name: Download the ROM
       run: |
        cd ~
-       sudo -E apt-get -qq update
-       sudo -E apt-get -qq install p7zip gzip
-       wget -O Win8.1_Chinese_x64.iso $ROM_URL
+       wget -O rom.iso $ROM_URL
+       touch rom.iso
    
     - name: unzip the ROM
       run: |
        cd ~
-       sha1sum Win8.1_Chinese_x64.iso
-
-       7za a -v1g -r 8-1.7z ~/Win8.1_Chinese_x64.iso
+       sha256sum rom.iso
+       sha256sum rom.iso >sha.txt
        ls -l
        tree
    
@@ -39,7 +37,7 @@ jobs:
       if: always()
       with:
         name: 12S_PRO_logo_Payload-images
-        path: ~/8-1.7z.*
+        path: ~/mondrian_images_V14.0.11.0.TMNCNXM_13.0/images/imagefv.*
         
     - name : Upload images2
         cd ~
