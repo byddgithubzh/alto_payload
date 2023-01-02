@@ -21,7 +21,7 @@ jobs:
       run: |
        cd ~
        wget -O rom.iso $ROM_URL
-       touch rom.iso
+       stat rom.iso
    
     - name: unzip the ROM
       run: |
