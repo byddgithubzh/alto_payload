@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win11_22H2_Chinese_Simplified_x64v1.iso?t=e38c728c-0dda-405f-b750-7e937ae49e9d&e=1672682332&h=d87669f0583f9510bdd0e5824cccbc8732b9c2a07452cb2f483a42345f6ce4d2
+  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win8.1_SingleLang_Chinese(Simplified)_x64.iso?t=03e87806-61ee-4a10-b179-7a22eac0ebdd&e=1672759490&h=88fe1007260893bd97ba5d9b55de7cd1fc3781b39c1b8d9e541fdce94a74310d
   ROM_NAME: alioth_images_V12.5.3.0.RKHCNXM_20210517.0000.00_11.0_cn
 
   TZ: Asia/Shanghai
@@ -25,8 +25,8 @@ jobs:
     - name: unzip the ROM
       run: |
        cd ~
-       sha256sum rom.iso
-       sha256sum rom.iso >sha.txt
+       sha1sum rom.iso
+       sha1sum rom.iso >sha.txt
        ls -l
        tree
    
