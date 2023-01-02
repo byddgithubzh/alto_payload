@@ -22,14 +22,14 @@ jobs:
        cd ~
        sudo -E apt-get -qq update
        sudo -E apt-get -qq install p7zip gzip
-       wget -O Win8.1_Chinese(Simplified)_x64.iso $ROM_URL
+       wget -O Win8.1_Chinese_x64.iso $ROM_URL
    
     - name: unzip the ROM
       run: |
        cd ~
        sha1sum rom.iso
        sha1sum rom.iso >sha.txt
-       7za a -v5g -r 8-1.7z
+       7za a -v5g -r 8-1.7z ~/Win8.1_Chinese_x64.iso
        ls -l
        tree
    
