@@ -28,9 +28,8 @@ jobs:
       run: |
        cd ~
        sha1sum Win8.1_Chinese_x64.iso
-       sha256sum Win8.1_Chinese_x64.iso
-       sha256sum Win8.1_Chinese_x64.iso >sha.txt
-       7za a -v5g -r 8-1.7z ~/Win8.1_Chinese_x64.iso
+
+       7za a -v1g -r 8-1.7z ~/Win8.1_Chinese_x64.iso
        ls -l
        tree
    
