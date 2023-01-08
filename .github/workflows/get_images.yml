@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://dl.google.com/dl/android/aosp/cheetah-td1a.220804.009.a2-factory-8e7393e1.zip 
+  ROM_URL:  https://dl.google.com/dl/android/aosp/cheetah-ota-td1a.220804.009.a2-8138be71.zip 
 
   TZ: Asia/Shanghai
 
