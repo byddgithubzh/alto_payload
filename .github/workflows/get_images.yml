@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://dl.google.com/dl/android/aosp/raven-ota-sd1a.210817.019.c4-e0ff1e8a.zip 
+  ROM_URL:  https://dl.google.com/dl/android/aosp/cheetah-tq1a.230105.002.a1-factory-6632344c.zip 
 
   TZ: Asia/Shanghai
 
