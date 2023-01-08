@@ -38,7 +38,7 @@ jobs:
        unzip rom.zip 
        dir
        ls -l
-       tree
+       
        
        - name: unzip the ROM2
        run: |
