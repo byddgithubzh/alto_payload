@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://sysupwrdl.vivo.com.cn/upgrade/official/officialFiles/PD2203_A_12.0.16.6.W10.V000L1-update-full_1667977060.zip 
+  ROM_URL:  https://dl.google.com/dl/android/aosp/cheetah-td1a.220804.009.a2-factory-8e7393e1.zip 
 
   TZ: Asia/Shanghai
 
