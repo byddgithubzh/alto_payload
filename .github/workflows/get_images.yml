@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://sysupwrdl.vivo.com.cn/upgrade/official/officialFiles/PD2203_A_12.0.16.6.W10.V000L1-update-full_1667977060.zip 
+  ROM_URL:  https://dl.google.com/developers/android/tm/images/factory/raven-t1b1.220819.006-factory-29c7bb01.zip?hl=zh-cn 
 
   TZ: Asia/Shanghai
 
