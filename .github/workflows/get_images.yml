@@ -36,7 +36,7 @@ jobs:
       run: |
        cd ~
        unzip rom.zip -d ROMFILE
-       
+       unzip ~/ROMFILE/raven-t1b1.220819.006/image-raven-t1b1.220819.006.zip
        dir
        ls -l
        
