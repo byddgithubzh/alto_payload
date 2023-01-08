@@ -32,14 +32,22 @@ jobs:
        wget -O rom.zip $ROM_URL
        ls -l
        
-    - name: unzip the ROM
+    - name: unzip the ROM1
       run: |
        cd ~
-       unzip rom.zip -d ROMFILE
+       unzip rom.zip -d 
        dir
        ls -l
        tree
        
+       - name: unzip the ROM2
+       run: |
+        cd ~
+        unzip image-cheetah-td1a.220804.009.a2.zip -d ROMFILE
+        dir
+        ls -l
+        tree
+
     - name: extract the payload.bin
       run: |
        cd ~
