@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://dl.google.com/developers/android/tm/images/factory/raven-t1b1.220819.006-factory-29c7bb01.zip?hl=zh-cn 
+  ROM_URL:  https://sysupwrdl.vivo.com.cn/upgrade/official/officialFiles/PD2186_A_12.0.20.2.W10.V000L1-update-full_1665230745.zip 
 
   TZ: Asia/Shanghai
 
@@ -36,7 +36,7 @@ jobs:
       run: |
        cd ~
        unzip rom.zip -d ROMFILE
-       unzip ~/ROMFILE/raven-t1b1.220819.006/image-raven-t1b1.220819.006.zip
+       
        dir
        ls -l
        
