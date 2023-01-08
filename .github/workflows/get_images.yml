@@ -35,19 +35,12 @@ jobs:
     - name: unzip the ROM1
       run: |
        cd ~
-       unzip rom.zip 
+       unzip rom.zip
+       unzip image-cheetah-td1a.220804.009.a2.zip -d ROMFILE 
        dir
        ls -l
        
-       
-       - name: unzip the ROM2
-       run: |
-        cd ~
-        unzip image-cheetah-td1a.220804.009.a2.zip -d ROMFILE
-        dir
-        ls -l
-        tree
-
+              
     - name: extract the payload.bin
       run: |
        cd ~
