@@ -35,7 +35,7 @@ jobs:
     - name: unzip the ROM1
       run: |
        cd ~
-       unzip rom.zip -d 
+       unzip rom.zip 
        dir
        ls -l
        tree
