@@ -35,8 +35,7 @@ jobs:
     - name: unzip the ROM1
       run: |
        cd ~
-       unzip rom.zip
-       unzip ~/cheetah-td1a.220804.009.a2/image-cheetah-td1a.220804.009.a2.zip -d ROMFILE 
+       unzip rom.zip -d ROMFILE 
        dir
        ls -l
        
