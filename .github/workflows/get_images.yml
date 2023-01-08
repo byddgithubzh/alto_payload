@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://dl.google.com/dl/android/aosp/cheetah-tq1a.230105.002.a1-factory-6632344c.zip 
+  ROM_URL:  https://dl.google.com/dl/android/aosp/taimen-ota-pq3a.190605.003-b699cbc8.zip 
 
   TZ: Asia/Shanghai
 
@@ -36,7 +36,7 @@ jobs:
       run: |
        cd ~
        unzip rom.zip -d ROMFILE
-       unzip ROMFILE/cheetah-tq1a.230105.002.a1/image-cheetah-tq1a.230105.002.a1.zip
+       
        dir
        ls -l
        
