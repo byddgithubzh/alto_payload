@@ -5,8 +5,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win8.1_Chinese(Simplified)_x64.iso?t=75c8252a-fb6a-4595-b452-033c8ac82db8&e=1673510412&h=c12dc15e971580bb0d3d6fb6fe897c164ac9c604503d70b6815da4340d0d49ef
-  ROM_NAME: alioth_images_V12.5.3.0.RKHCNXM_20210517.0000.00_11.0_cn
+  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win8.1_Chinese(Simplified)_x32.iso?t=75c8252a-fb6a-4595-b452-033c8ac82db8&e=1673510412&h=aad37c5d281bd286428647ef39ffc0a93ff044a3764e9efbd27a86004c39a1e2
+
 
   TZ: Asia/Shanghai
 
