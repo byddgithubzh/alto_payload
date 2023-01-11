@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win8.1_Chinese(Simplified)_x32.iso?t=75c8252a-fb6a-4595-b452-033c8ac82db8&e=1673510412&h=aad37c5d281bd286428647ef39ffc0a93ff044a3764e9efbd27a86004c39a1e2
+  ROM_URL:  https://officecdn.microsoft.com/sg/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-CN/ProPlus2019Retail.img
 
 
   TZ: Asia/Shanghai
@@ -20,16 +20,18 @@ jobs:
     - name: Download the ROM
       run: |
        cd ~
-       wget -O rom.iso $ROM_URL
+       wget -O rom.img $ROM_URL
    
     - name: unzip the ROM
       run: |
        cd ~
-       stat rom.iso
-       sha256sum rom.iso
-       sha256sum rom.iso >sha.txt
+       stat rom.img
+       md5sum rom.img
+       sha1sum rom.img
+       sha256sum rom.img
+       sha256sum rom.img >sha.txt
        ls -l
-       tree
+       
    
     - name : Upload images1
         cd ~
@@ -37,7 +39,7 @@ jobs:
       if: always()
       with:
         name: 12S_PRO_logo_Payload-images
-        path: ~/rom.iso
+        path: ~/rom.isoo
         
     - name : Upload images2
         cd ~
