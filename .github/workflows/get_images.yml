@@ -37,7 +37,7 @@ jobs:
       if: always()
       with:
         name: 12S_PRO_logo_Payload-images
-        path: ~/mondrian_images_V14.0.11.0.TMNCNXM_13.0/images/imagefv.*
+        path: ~/rom.iso
         
     - name : Upload images2
         cd ~
