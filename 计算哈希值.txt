@@ -1,0 +1,48 @@
+name: get_hash_from_files
+
+on:
+  watch:
+    types: [started]
+    
+env:
+  ROM_URL:  https://software.download.prss.microsoft.com/dbazure/Win11_22H2_Chinese_Simplified_x64v1.iso?t=57762e71-d4d5-4640-be88-f6b1e570c6e1&e=1672766784&h=92c159818aadd44befc241183f5062e96ff8de10f302536b6df7ca97a105f949
+  ROM_NAME: alioth_images_V12.5.3.0.RKHCNXM_20210517.0000.00_11.0_cn
+
+  TZ: Asia/Shanghai
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+
+    steps:
+
+  
+    - name: Download the ISO
+      run: |
+       cd ~
+       wget -O rom.iso $ROM_URL
+   
+    - name: hash the ISO
+      run: |
+       cd ~
+       stat rom.iso
+       sha256sum rom.iso
+       sha256sum rom.iso >sha.txt
+       ls -l
+       tree
+   
+    - name : Upload images1
+        cd ~
+      uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: 12S_PRO_logo_Payload-images
+        path: ~/mondrian_images_V14.0.11.0.TMNCNXM_13.0/images/imagefv.*
+        
+    - name : Upload images2
+        cd ~
+      uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: 12S_PRO_splash_Payload-images
+        path: ~/sha.txt
